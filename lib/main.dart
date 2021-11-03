@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
 
   runApp(MaterialApp(
     title: "Daily Phrase",
-    home: Container(color: Colors.white,),
+    home: Column(children: const <Widget>[
+      Text("Co1"),
+      Text("Co2"),
+      Text("Co3"),
+    ],),
+    //home: Container(color: Colors.white,),
   ));
 
 }
+
