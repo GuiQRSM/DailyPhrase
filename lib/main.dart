@@ -9,20 +9,20 @@ void main() {
     home: Container(
       color: Colors.white,
       child: Column(children: const <Widget>[
-      Text(
-          "Lorem ipsum",
-           style: TextStyle(
-             fontSize: 35,
-             fontStyle: FontStyle.italic,
-             letterSpacing: 1,
-             wordSpacing: 0,
-             decoration: TextDecoration.underline,
-             fontWeight: FontWeight.w700,
-             color: Colors.blueGrey,
-           ),
-      ),
-      ],
-      ),
+        Text(
+            "Loftus Check!",
+        style: TextStyle(
+          fontSize: 30,
+          fontStyle: FontStyle.italic,
+          color: Colors.deepOrange,
+          fontWeight: FontWeight.w600,
+          decoration: TextDecoration.underline,
+          decorationStyle: TextDecorationStyle.wavy,
+          decorationColor: Colors.redAccent,
+          letterSpacing: 3,
+        ),
+        ),
+      ],),
     ),
   ));
 
