@@ -7,26 +7,26 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: "Daily Phrase",
     home: Container(
-      //color: Colors.white,
-      padding: EdgeInsets.only(top: 40, bottom: 40),
-      margin: EdgeInsets.fromLTRB(30, 40, 30, 40),
+      margin: const EdgeInsets.only(top: 40),
       decoration: BoxDecoration(
        border: Border.all(width: 5, color: Colors.lightBlue)
      ),
-
-      child: Column(children: const <Widget>[
-        Text(
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut scelerisque nisl.",
-          textAlign: TextAlign.justify,
-          style: TextStyle(
-            fontSize: 38,
-            color: Colors.indigo,
-            decorationColor: Colors.lightBlueAccent
-          ),
-            ),
-              ],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+        Text("cn1"),
+        Text("cn2"),
+        Text("cn3"),
+      ],
       ),
     ),
   ));
 
 }
+
+/*Padding(
+ padding:EdgeInsets.all(),
+ child: Text("t2")
+)
+*/
