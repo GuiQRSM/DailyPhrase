@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,14 +12,9 @@ void main() {
       decoration: BoxDecoration(
        border: Border.all(width: 5, color: Colors.lightBlue)
      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-        Text("cn1"),
-        Text("cn2"),
-        Text("cn3"),
-      ],
+      child: Image.asset(
+        "images/purplerain.jpg",
+        fit: BoxFit.cover,
       ),
     ),
   ));
