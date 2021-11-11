@@ -6,27 +6,43 @@ void main() {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: "Daily Phrase",
-    home: Container(
-     margin: const EdgeInsets.only(top: 41),
-     decoration: BoxDecoration(
-       border: Border.all(width: 6, color: Colors.deepOrange)
-     ),
-     child: Image.asset(
-       "images/blackorange.jpg",
-        fit: BoxFit.cover,
-     ),
-
-      /*child: Row(
-        children: const <Widget>[
-        Text("T1",),
-          Text("T2"),
-           Text("T3"),
-        ],
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-      ),*/
-
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Daily Phrase"),
+        backgroundColor: Colors.deepOrange,
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Text(
+            "Test for body!",
+            style: TextStyle(
+            fontSize: 30,
+              color: Colors.deepOrangeAccent,
+        ),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.deepOrange,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Text("botton1",
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+            ),
+          ),
+          Text("botto2",
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+            ),
+          ),
+            ],
+          ),
+        ),
+      ),
     ),
   ));
 
