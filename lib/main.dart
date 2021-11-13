@@ -11,13 +11,15 @@ void main() {
 
 }
 
+
 class HomeStateFul extends StatefulWidget {
+  const HomeStateFul({Key? key}) : super(key: key);
 
   @override
   _HomeStateFulState createState() => _HomeStateFulState();
 }
 
-var _text = "Test Content";
+var _text = "Item Test!";
 
 class _HomeStateFulState extends State<HomeStateFul> {
   @override
@@ -27,21 +29,48 @@ class _HomeStateFulState extends State<HomeStateFul> {
         title: Text("Daily Phrase"),
         backgroundColor: Colors.orange,
       ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            RaisedButton(
-              onPressed: (){
-                setState(() {
-                  _text = "Clicado!";
-                });
-              },
-              color: Colors.orangeAccent,
-              child: Text("Clique Aqui!"),
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Text(
+              "Test for Body",
+              style: TextStyle(
+                color: Colors.orangeAccent,
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 3,
+                fontStyle: FontStyle.italic,
+              ),
             ),
-            Text("$_text"),
-          ],
-        ),
+          ),
+          RaisedButton(
+            onPressed: (){
+              setState(() {
+                _text = "Clicado!";
+              });
+            },
+            color: Colors.orangeAccent,
+            child: Text(
+                "Clique Aqui!",
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+              wordSpacing: 3,
+             ),
+            ),
+          ),
+          Text(
+              "$_text",
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: Colors.orangeAccent,
+              wordSpacing: 3,
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar:BottomAppBar(
         color: Colors.orange,
@@ -97,6 +126,9 @@ class _HomeStateFulState extends State<HomeStateFul> {
     );;
   }
 }
+
+
+
 
 
 
