@@ -18,7 +18,7 @@ class HomeStateFul extends StatefulWidget {
   _HomeStateFulState createState() => _HomeStateFulState();
 }
 
-var _text = "";
+var _text = "Clique abaixo para gerar a frase!";
 
 class _HomeStateFulState extends State<HomeStateFul> {
   @override
@@ -26,26 +26,30 @@ class _HomeStateFulState extends State<HomeStateFul> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Daily Phrase",
+          "Frases do Dia",
           style: TextStyle(
             color: Colors.white,
           ),),
         backgroundColor: Colors.deepOrange,
       ),
       body: Container(
-        decoration: BoxDecoration(border: Border.all(width: 3, color: Colors.lime)),
+        width: double.infinity,
+        //decoration: BoxDecoration(border: Border.all(width: 3, color: Colors.lime)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
-                padding: EdgeInsets.fromLTRB(120, 170,120, 170),
+                padding: EdgeInsets.all(16),
                 child: Image.asset(
                   "images/logoOrange.png",
-                )
+                  fit: BoxFit.fitHeight,
+                ),
             ),
             Text(
               "$_text",
+              textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
                 fontWeight: FontWeight.w600,
                 color: Colors.orange,
               ),
