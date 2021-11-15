@@ -5,43 +5,76 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-              "Daily Phrase",
-          style: TextStyle(
-            color: Colors.white,
-          ),),
-          backgroundColor: Colors.deepOrange,
-        ),
-        body: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(120, 190,120, 190),
-              child: Text(
-                "Frase do dia!",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.orange,
-                ),
-              ),
-            ),
-             RaisedButton(
-              onPressed: (){},
-              color: Colors.orangeAccent,
-               child: Text(
-                   "Nova Frase",
-                 style: TextStyle(
-                   fontWeight: FontWeight.w600,
-                   color: Colors.white,
-                 ),
-               ),
-            )
-          ],
-        ),
-      ),
+      home: HomeStateFul(),
     ),
   );
 
 }
+
+class HomeStateFul extends StatefulWidget {
+  const HomeStateFul({Key? key}) : super(key: key);
+
+  @override
+  _HomeStateFulState createState() => _HomeStateFulState();
+}
+
+var _text = "Teste Phrase";
+
+class _HomeStateFulState extends State<HomeStateFul> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Daily Phrase",
+          style: TextStyle(
+            color: Colors.white,
+          ),),
+        backgroundColor: Colors.deepOrange,
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(120, 190,120, 190),
+            child: Text(
+              "Frase do dia!",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: Colors.orange,
+              ),
+            ),
+          ),
+          Text(
+            "$_text",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Colors.orange,
+            ),
+          ),
+          RaisedButton(
+            onPressed: (){
+              setState(() {
+                _text = "Frase Motivacional!";
+              });
+            },
+            color: Colors.orangeAccent,
+            child: Text(
+              "Nova Frase",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+/*
+
+ */
