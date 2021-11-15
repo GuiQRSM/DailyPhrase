@@ -32,38 +32,41 @@ class _HomeStateFulState extends State<HomeStateFul> {
           ),),
         backgroundColor: Colors.deepOrange,
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(120, 170,120, 170),
-            child: Image.asset(
-              "images/logoOrange.png",
-            )
-          ),
-          Text(
-            "$_text",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-              color: Colors.orange,
+      body: Container(
+        decoration: BoxDecoration(border: Border.all(width: 3, color: Colors.lime)),
+        child: Column(
+          children: [
+            Padding(
+                padding: EdgeInsets.fromLTRB(120, 170,120, 170),
+                child: Image.asset(
+                  "images/logoOrange.png",
+                )
             ),
-          ),
-          RaisedButton(
-            onPressed: (){
-              setState(() {
-                _text = "Frase Motivacional!";
-              });
-            },
-            color: Colors.orangeAccent,
-            child: Text(
-              "Nova Frase",
+            Text(
+              "$_text",
               style: TextStyle(
+                fontSize: 20,
                 fontWeight: FontWeight.w600,
-                color: Colors.white,
+                color: Colors.orange,
               ),
             ),
-          ),
-        ],
+            RaisedButton(
+              onPressed: (){
+                setState(() {
+                  _text = "Frase Motivacional!";
+                });
+              },
+              color: Colors.orangeAccent,
+              child: Text(
+                "Nova Frase",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
