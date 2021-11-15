@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
 
@@ -18,9 +19,25 @@ class HomeStateFul extends StatefulWidget {
   _HomeStateFulState createState() => _HomeStateFulState();
 }
 
-var _text = "Clique abaixo para gerar a frase!";
-
 class _HomeStateFulState extends State<HomeStateFul> {
+
+  var _fixo = "Clique abaixo para gerar uma frase!";
+
+  var _frases = [
+    "Quando pensar em desistir, lembre-se porque começou.",
+    "Se não puder fazer tudo, faça tudo que puder.",
+    "Comece onde você está. Use o que você tem. Faça o que puder.",
+    "O corpo alcança o que a mente acredita.",
+    "Dias de luz sempre retornam para quem iluminado está.",
+  ];
+
+ void _callPhrase() {
+   var numberRamdon = Random().nextInt(_frases.length);
+   setState(() {
+     _fixo = _frases[numberRamdon];
+   });
+ }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,8 +63,8 @@ class _HomeStateFulState extends State<HomeStateFul> {
                 ),
             ),
             Text(
-              "$_text",
-              textAlign: TextAlign.justify,
+              "$_fixo",
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
@@ -55,12 +72,8 @@ class _HomeStateFulState extends State<HomeStateFul> {
               ),
             ),
             RaisedButton(
-              onPressed: (){
-                setState(() {
-                  _text = "Frase Motivacional!";
-                });
-              },
-              color: Colors.orangeAccent,
+              onPressed:_callPhrase,
+              color: Colors.orange,
               child: Text(
                 "Nova Frase",
                 style: TextStyle(
@@ -75,8 +88,3 @@ class _HomeStateFulState extends State<HomeStateFul> {
     );
   }
 }
-
-
-/*
-
- */
