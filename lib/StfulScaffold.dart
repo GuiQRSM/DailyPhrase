@@ -48,7 +48,7 @@ class _HomeStateFulState extends State<HomeStateFul> {
               padding: EdgeInsets.all(16),
               child: Image.asset(
                 "images/logoOrange.png",
-                fit: BoxFit.fitHeight,
+                height: 130,
               ),
             ),
             Text(
